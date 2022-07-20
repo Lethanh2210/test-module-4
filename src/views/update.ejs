@@ -1,0 +1,26 @@
+<%- include('./patials/header.ejs')-%>
+<form action="/employee/update/<%=employee._id%>" method="post">
+    <div class="form-group">
+        <label >Name</label>
+        <input type="text" class="form-control"  placeholder="Enter Name" name="name" value="<%= employee.name%>">
+    </div>
+    <div class="form-group">
+        <label >Code</label>
+        <input type="text" class="form-control"  placeholder="Enter Code" name="code" value="<%= employee.code%>">
+    </div>
+    <div class="form-group">
+        <label >Age</label>
+        <input type="text" class="form-control"  placeholder="Enter Age" name="age" value="<%= employee.age%>">
+    </div>
+    <div class="form-group">
+        <label >salary</label>
+        <input type="text" class="form-control"  placeholder="Enter salary" name="salary" value="<%= employee.salary%>">
+    </div>
+    <select class="form-control" name="branch">
+        <% branches.forEach((item) => { %>
+            <option value="<%= item._id%>"><%= item.name%></option>
+        <% }) %>
+    </select>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<%- include('./patials/footer.ejs')-%>

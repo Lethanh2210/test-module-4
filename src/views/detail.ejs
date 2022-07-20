@@ -1,0 +1,14 @@
+<%- include('./patials/header.ejs')-%>
+<h1>INFORMATION</h1>
+
+
+<p>Staff Code: <%= employee.code%></p>
+
+<p>Name: <%= employee.name%></p>
+<p>Age: <%= employee.age%></p>
+<p>salary: <%= employee.salary%></p>
+<p>branch: <%= employee.branch ? employee.branch.name : 'none'%></p>
+
+<a href="/employee/list" class="btn btn-primary">back</a>
+
+<%- include('./patials/footer.ejs')-%>
